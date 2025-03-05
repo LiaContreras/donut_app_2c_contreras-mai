@@ -1,3 +1,4 @@
+import 'package:donut_app_2c_contreras/utils/donut_tile.dart';
 import 'package:flutter/material.dart';
 
 class DonutTab extends StatelessWidget {
@@ -31,15 +32,18 @@ class DonutTab extends StatelessWidget {
       SliverGridDelegateWithFixedCrossAxisCount(
         //Cuántas columnas
         //
-        crossAxisCount: 2 
+        crossAxisCount: 2,
+
+        //Relación de aspecto
+        childAspectRatio: 1/1.5,  
 
       ),
       itemBuilder: (context,index) {
         return DonutTile(
           donutFlavor: donutsOnSale[index][0],
-          donutFlavor: donutsOnSale[index][1],
-          donutFlavor: donutsOnSale[index][2],
-          donutFlavor: donutsOnSale[index][3],
+          donutPrice: donutsOnSale[index][1],
+          donutColor: donutsOnSale[index][2],
+          imageName: donutsOnSale[index][3],
         );
         
       } ,

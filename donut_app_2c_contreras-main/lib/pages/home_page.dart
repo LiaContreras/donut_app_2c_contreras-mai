@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
           ),
           actions: const [
             Padding(
-              padding: const EdgeInsets.only(right: 24.0),
+              padding: EdgeInsets.only(right: 24.0),
               child: Icon(Icons.person),
             )
           ],
